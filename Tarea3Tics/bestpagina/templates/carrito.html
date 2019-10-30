@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {% for car in carro %}
+                <div class="col-md-4 col-xs-6">
+                    <div class="product"
+                         style="cursor:pointer;">
+
+                        <div class="product-img">
+                            <img src="/{{ car.prod.imagen.url }}" alt="">
+                        </div>
+
+                        <div class="product-body">
+                            <p class="product-Categoria">{{ car.prod.categoria }}</p>
+                            <h3 class="product-name"><a href="#">{{ car.prod.nombre }}</a></h3>
+                            <h4 class="product-price">{{ car.prod.precio }}</h4>
+                        </div>
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

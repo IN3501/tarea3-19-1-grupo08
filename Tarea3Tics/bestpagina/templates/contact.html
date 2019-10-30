@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <br>
+
+    <div id="descripcion" class="container">
+        <h1>Contactenos</h1>
+
+        <!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
+        <form action="/enviado/" method="POST" autocomplete="off">  {% csrf_token %}
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nombre</label>
+                <input type="text" class="form-control" id="exampleText" placeholder="" name="inputText">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleNumber">Rut</label>
+                <input type="number" class="form-control" id="exampleNumber" placeholder="Ej 12.345.678-9"
+                       name="inputNumber">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleNumber">Teléfono</label>
+                <input type="number" class="form-control" id="exampleNumber" placeholder="" name="inputNumber">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Correo electrónico</label>
+                <input type="email" class="form-control" id="exampleEmail" placeholder="" name="inputEmail">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlTextarea">Comentarios</label>
+                <textarea class="form-control" id="exampleFormControlTextarea" rows="3" name="textA"></textarea>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <button type="submit" class="primary-btn order-submit">Enviar</button>
+            </div>
+
+        </form>
+
+    </div>
+
+{% endblock body %}
